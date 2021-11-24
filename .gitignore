@@ -1,4 +1,4 @@
 *.db
 
-warehouse/detections
+pipeline/warehouse/detections
 .idea

@@ -5,10 +5,11 @@ from fastapi import FastAPI, Form, File, UploadFile, Depends
 from fastapi.responses import FileResponse
 from sqlalchemy.orm import Session
 
-from warehouse import crud, models
-from warehouse.db.database import SessionLocal, engine, Base
-from warehouse.file_storage import save_image
-from warehouse.models import Frame
+from pipeline.warehouse import crud
+from pipeline import models
+from pipeline.warehouse.db.database import SessionLocal, engine, Base
+from pipeline.warehouse.file_storage import save_image
+from pipeline.models import Frame
 
 Base.metadata.create_all(bind=engine)
 

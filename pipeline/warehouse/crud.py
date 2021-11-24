@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session, subqueryload
 
-from . import models
+from .. import models
 from .db import schemas
 
 

@@ -1,6 +1,7 @@
-from pydantic import BaseModel
-from typing import Optional, List
 import json
+from typing import List
+
+from pydantic import BaseModel
 
 
 class Detection(BaseModel):
@@ -12,10 +13,16 @@ class Detection(BaseModel):
     category: str
     confidence: float
 
+    class Config:
+        orm_mode = True
+
 
 class Frame(BaseModel):
     deviceId: str
     detections: List[Detection]
+
+    class Config:
+        orm_mode = True
 
     @classmethod
     def __get_validators__(cls):

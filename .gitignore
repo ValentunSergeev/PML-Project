@@ -2,3 +2,9 @@
 
 pipeline/warehouse/detections
 .idea
+
+onnx
+
+__pycache__
+
+pipeline/client/all_models/
